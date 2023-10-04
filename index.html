@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Spotlights</h1>
+    <form class="form">
+      <div class="inputs">
+        <label for="url">URL </label>
+        <input
+          type="text"
+          placeholder="Ex. https://www.international.uwo.ca/"
+          class="url"
+        />
+      </div>
+
+      <div class="inputs">
+        <label for="title">Title</label>
+        <input
+          required
+          type="text"
+          class="title"
+          placeholder="Ex. Western International"
+        />
+      </div>
+
+      <div class="inputs">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          name="description"
+          class="description"
+          placeholder="EX. This is an example description. It should be about 50 words long."
+        />
+      </div>
+
+      <div class="inputs">
+        <label for="image-source">Image Source (if available)</label>
+        <input
+          type="text"
+          class="image-source"
+          placeholder="EX. https://www.international.uwo.ca/ "
+        />
+      </div>
+
+      <div class="inputs">
+        <label for="">Date</label>
+        <input type="text" placeholder="EX. June 2, 2030" class="date" />
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </body>
+</html>
