@@ -7,16 +7,17 @@ window.addEventListener("DOMContentLoaded", () => {
     let title = document.querySelector(".title");
     let url = document.querySelector(".url");
     let desc = document.querySelector(".description");
+    let category = document.querySelector(".category");
     let src = document.querySelector(".image-source");
     let date = document.querySelector(".date");
     let titleVal = `{
         name: "${title.value}",
         url:"${url.value}",
         description:"${desc.value}",
+        category:"${category.value}"
         imageSource:"${src.value}",
         date:"${date.value}"
     }`;
-
     ipcRenderer.send("saveText", titleVal);
   });
 });

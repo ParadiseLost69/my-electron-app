@@ -1,7 +1,0 @@
-{
-        name: "wew",
-        url:"",
-        description:"",
-        imageSource:"",
-        date:""
-    }

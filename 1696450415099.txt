@@ -1,7 +1,0 @@
-{
-        name: "The Tile Part Two",
-        url:"nawdjknjknekj",
-        description:"The description for this is the description.",
-        imageSource:"",
-        date:"June 3, 2023"
-    }
