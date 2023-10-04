@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, shell } = require("electron");
 const path = require("node:path");
 const fs = require("fs");
+const os = require("os");
 
 console.log("STARTED");
 
@@ -20,10 +21,14 @@ const createWindow = () => {
 
 ipcMain.on("saveText", (err, val) => {
   let date = new Date().getTime();
-  let filePath = path.join(__dirname, `${date}.txt`);
+
+  let desktopPath = path.join(os.homedir(), "Desktop");
+  let filePath = path.join(desktopPath, `spotlights-${date}.txt`);
   fs.writeFile(filePath, val.toString(), (e) => {
     if (!e) {
       console.log("FILE UPLOADED");
+      console.log(os.homedir());
+      console.log(filePath);
       shell.openPath(filePath);
     } else console.log("ERROR" + " " + e.toString());
   });
